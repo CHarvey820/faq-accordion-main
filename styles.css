@@ -29,8 +29,6 @@
 body {
   background-image: url(/assets/images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
   background-color: var(--clr-ltPink);
 }
 
@@ -144,7 +142,6 @@ summary {
 @media (min-width: 900px) {
   body {
     background-image: url(/assets/images/background-pattern-desktop.svg);
-    background-position: top;
     background-size: 100%;
   }
 
