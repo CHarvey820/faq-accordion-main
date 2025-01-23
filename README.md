@@ -38,7 +38,7 @@ Desktop Design:
 
 Hover State:
 
-![](./ss-hoverstate.png)
+![](./ss-hoverState.png)
 
 ### Links
 
