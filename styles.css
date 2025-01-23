@@ -1,0 +1,171 @@
+/* Given Stylings */
+:root {
+  /* colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-ltPink: hsl(275, 100%, 97%);
+  --clr-grayPurple: hsl(292, 16%, 49%);
+  --clr-dkPurple: hsl(292, 42%, 14%);
+
+  /* font weights */
+  --fw-light: 400;
+  --fw-med: 600;
+  --fw-bold: 700;
+
+  /* fonts */
+  --font-workSans: "Work Sans", sans-serif;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: var(--clr-ltPink);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-workSans);
+  overflow: scroll;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  color: var(--clr-dkPurple);
+  font-size: 1.05rem;
+  font-weight: var(--fw-med);
+  max-width: 80%;
+}
+
+h3:hover {
+  color: #ad28eb;
+}
+
+hr {
+  color: var(--clr-ltPink);
+  border: 1px solid;
+}
+
+summary {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  width: 85%;
+  max-width: 700px;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  overflow: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.slice {
+  padding: 1.5rem 0;
+}
+
+.slice:last-of-type {
+  padding-bottom: 0;
+}
+
+.accordion h1 {
+  padding: 1rem;
+}
+
+.accordionTitle {
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -website-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordionTitle + .accordionContent {
+  display: none;
+}
+
+.accordionTitle.is-open + .accordionContent {
+  display: block;
+}
+
+.answer {
+  color: var(--clr-grayPurple);
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: var(--fw-light);
+}
+
+.starIcon {
+  width: 27px;
+  margin-right: 1.5rem;
+}
+
+.iconHidden {
+  display: none;
+}
+
+/* pre-included attribution css moved from index <style> */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* non-mobile settings */
+@media (min-width: 900px) {
+  body {
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+    background-position: top;
+    background-size: 100%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    max-width: 90%;
+  }
+
+  .container {
+    max-width: 40%;
+  }
+
+  .answer {
+    font-size: 1rem;
+  }
+
+  .starIcon {
+    width: 40px;
+  }
+}
